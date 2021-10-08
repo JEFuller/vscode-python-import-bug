@@ -1,4 +1,6 @@
-from models import db
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
-class Foo:
-    pass
+db = SQLAlchemy()
+app = Flask(__name__)
+db.init_app(app)
